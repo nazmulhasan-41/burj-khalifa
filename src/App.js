@@ -1,16 +1,27 @@
 import './App.css';
 import firebaseConfig from './firebase.config';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
+import { Routes, Route, Link } from "react-router-dom";
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import { initializeApp } from 'firebase/app';
+
+
+
+const app = initializeApp(firebaseConfig);
 
 function App() {
   return (
-    <div >
 
-        <Button variant="primary">Primary</Button>
+    <Container>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-
+      </Routes>
       
-    </div>
+    </Container>
+
   );
 }
 
