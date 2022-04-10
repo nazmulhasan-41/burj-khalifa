@@ -1,0 +1,45 @@
+
+.row {
+    justify-content: center;
+   
+}
+.card {
+    
+    margin: 13px !important;
+}
+.card {
+  
+    padding: inherit !important;
+}
+.cost.col-md-6.col-12 {
+    font-family: cursive;
+    font-weight: 600;
+}
+.priceInfo.row {
+    margin-bottom: 7px;
+}
+.navbar-light .navbar-brand {
+    color: #2bef94 !important;
+    font-family: cursive;
+    font-weight: lighter;
+}
+
+
+a.detailsButton {
+    color: #0d88a1;
+    text-decoration: none;
+}
+a.detailsButton {
+    border: 1px solid;
+    padding: 5px 15px 5px 15px;
+    /* margin-top: 5px; */
+    /* margin-top: 98px; */
+}
+.button {
+    margin-top: 16px;
+    text-align: end;
+}
+a.detailsButton {
+    
+    border-radius: 23px;
+}

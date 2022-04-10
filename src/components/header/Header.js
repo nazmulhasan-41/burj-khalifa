@@ -1,13 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Card, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 
 
-const Header = () => {
-
-   
+const Header = () => {  
 
 
     return (
@@ -15,14 +13,19 @@ const Header = () => {
 
 
             <Navbar bg="light" variant="light">
+                
                 <Container>
-                    <Navbar.Brand href="#home">Burj Khalifa</Navbar.Brand>
+                    <Link className='title' to="/">Burj Khalifa</Link>
                     <Nav className="me-auto">
                     <Link to="/" className='linkClass'>Home</Link>
                     <Link to="/products" className='linkClass'>Products</Link>
-                        
+                    <Link to="/login" className='linkClass'>Login</Link>
+
                     </Nav>
                 </Container>
+
+               
+
             </Navbar>
 
 

@@ -1,37 +1,32 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-
+import React, { useContext, useEffect } from 'react';
+import { Button, Row } from 'react-bootstrap';
+import './Home.css';
+import information from '../../data.json';
+import { Context } from '../../App';
+import Suit from '../suit/Suit';
 
 const Home = () => {
-    
-const provider = new GoogleAuthProvider();
+  const { data,setData, loggedInUser,setLoggedInUser } = useContext(Context);
 
-    const googleSignInHandler=()=>{
+  //const [data, setData] = value;
 
+useEffect(() => {
+    setData(information);
+    // console.log(data);
+  });
 
-        const auth = getAuth();
-        signInWithPopup(auth, provider)
-          .then((result) => {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-           
-            console.log(result.user);
-            // ...
-          }).catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            
-            // ...
-          });
+  return (
+    <div>
+      <Row>
+      {
+        data.map(suit=><Suit key={suit._id} suit={suit}></Suit>)
+      }
 
-    }
+      </Row>
 
-    return (
-        <div>
-            <Button onClick={googleSignInHandler} variant="primary">Google Sign In</Button>
-        </div>
-    );
+      
+    </div>
+  );
 };
 
 export default Home;
