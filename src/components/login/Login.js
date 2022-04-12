@@ -3,9 +3,10 @@ import { Button } from 'react-bootstrap';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import './Login.css';
 import { Context } from '../../App';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation, useAuth, useHistory } from 'react-router-dom';
 
 const Login = () => {
+
     // const { value, user } = useContext(Context);
     const { data,setData, loggedInUser,setLoggedInUser } = useContext(Context);
 

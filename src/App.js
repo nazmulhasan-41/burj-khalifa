@@ -9,6 +9,7 @@ import { createContext, useState } from 'react';
 import Details from './components/details/Details';
 import Login from './components/login/Login';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
+import Redux from './components/redux/Redux';
 
 const app = initializeApp(firebaseConfig);
 export const Context = createContext('Default Value');
@@ -29,6 +30,8 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/details" element={<Details/>} /> */}
         <Route path="/login" element={<Login />} />
+        <Route path="/redux" element={<Redux />} />
+
 
         <Route
           path="/details"
